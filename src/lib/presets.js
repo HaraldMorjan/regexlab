@@ -1,0 +1,58 @@
+export const PRESETS = [
+  {
+    id: 'email',
+    label: 'Email',
+    pattern: String.raw`[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}`,
+    flags: 'g',
+    sample: 'Contact dev@example.com or support@company.io for help.',
+  },
+  {
+    id: 'url',
+    label: 'URL',
+    pattern: String.raw`https?:\/\/[^\s]+`,
+    flags: 'g',
+    sample: 'Docs: https://vuejs.org and https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+  },
+  {
+    id: 'phone',
+    label: 'US Phone',
+    pattern: String.raw`\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}`,
+    flags: 'g',
+    sample: 'Call (502) 555-0199 or 502.555.0142 today.',
+  },
+  {
+    id: 'date',
+    label: 'ISO Date',
+    pattern: String.raw`\d{4}-\d{2}-\d{2}`,
+    flags: 'g',
+    sample: 'Ship on 2026-03-15 before 2026-03-20.',
+  },
+  {
+    id: 'hex',
+    label: 'Hex color',
+    pattern: String.raw`#(?:[0-9a-fA-F]{3}){1,2}\b`,
+    flags: 'g',
+    sample: 'Palette: #a78bfa, #6366f1, and #fff.',
+  },
+  {
+    id: 'ipv4',
+    label: 'IPv4',
+    pattern: String.raw`\b(?:\d{1,3}\.){3}\d{1,3}\b`,
+    flags: 'g',
+    sample: 'Allow 192.168.0.1 and 10.0.0.42 on the VPN.',
+  },
+  {
+    id: 'slug',
+    label: 'Slug',
+    pattern: String.raw`\b[a-z0-9]+(?:-[a-z0-9]+)+\b`,
+    flags: 'g',
+    sample: 'Routes: /blog/getting-started and /docs/api-reference',
+  },
+  {
+    id: 'capture',
+    label: 'Named groups',
+    pattern: String.raw`(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})`,
+    flags: 'g',
+    sample: 'Events on 2026-06-28 and 2025-12-01.',
+  },
+]
